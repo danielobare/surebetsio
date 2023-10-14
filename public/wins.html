@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Bet Predictions</title>
+    <link rel="stylesheet" type="text/css" href="free.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <header>
+        <div class="top-container">
+            <div class="logo">
+                <img src="logo.png" alt="Sport Betting Logo">
+            </div>
+        </div>
+        <div class="container2">
+            <h1>Get in on the Action</h1>
+            <p>Place your bets on your favorite sports and win big!</p>
+            <a href="./registration.html" class="btn-primary">Join Now</a>
+        </div>
+        <div class="superstyle">
+            <div class="iHTVVn">
+                <nav>
+                    <ul class="hJDvhk">
+                        <li class="ism-nav__tab">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="ism-nav__tab">
+                            <a href="./free.html">Free</a>
+                        </li>
+                        <li class="ism-nav__tab">
+                            <a href="./paid.html">Paid</a>
+                        </li>
+                        <li class="ism-nav__tab">
+                            <a href="./vip.html">VIP</a>
+                        </li>
+                        <li class="ism-nav__tab">
+                            <a href="./wins.html">Wins</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="login-container">
+                <a href="./login.html" class="btn-primary-1">Login</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>30 Football Matches</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Match</th>
+                <th>Teams</th>
+                <th>Full Time Result</th>
+            </tr>
+        </thead>
+        <tbody id="match-results">
+            <!-- Results will be generated here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Function to generate a random full-time result (e.g., "2-1")
+        function generateResult() {
+            const homeGoals = Math.floor(Math.random() * 6); // Random number between 0 and 5
+            const awayGoals = Math.floor(Math.random() * 6); // Random number between 0 and 5
+            return `${homeGoals}-${awayGoals}`;
+        }
+
+        // Create 30 football match rows with random results
+        const matchResultsTable = document.getElementById('match-results');
+        for (let i = 1; i <= 30; i++) {
+            const matchResult = generateResult();
+            const row = document.createElement('tr');
+            const matchNumberCell = document.createElement('td');
+            const teamsCell = document.createElement('td');
+            const resultCell = document.createElement('td');
+
+            matchNumberCell.textContent = `Match ${i}`;
+            // Generate random team names for England
+            const teams = ["Manchester United", "Arsenal", "Liverpool", "Chelsea", "Manchester City", "Tottenham Hotspur", "Leicester City", "Everton", "West Ham United", "Leeds United", "Aston Villa", "Wolverhampton Wanderers", "Crystal Palace", "Southampton", "Brighton & Hove Albion", "Newcastle United"];
+            const homeTeamIndex = Math.floor(Math.random() * teams.length);
+            let awayTeamIndex;
+            do {
+                awayTeamIndex = Math.floor(Math.random() * teams.length);
+            } while (awayTeamIndex === homeTeamIndex);
+            const teamsText = `${teams[homeTeamIndex]} vs. ${teams[awayTeamIndex]}`;
+            teamsCell.textContent = teamsText;
+            resultCell.textContent = matchResult;
+
+            row.appendChild(matchNumberCell);
+            row.appendChild(teamsCell);
+            row.appendChild(resultCell);
+            matchResultsTable.appendChild(row);
+        }
+    </script>
+    </main>
+
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-dced39cc-30ef-4c3a-9907-d253d3b468bd"></div>
+
+    <div class="scroll-container">
+        <div class="scroll-content">Guaranteed Profit | Expert Analysis | Proven History | Mpesa Allowed | Over 80% Win Rate</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Football Predictions</p>
+    </footer>
+</body>
+</html>

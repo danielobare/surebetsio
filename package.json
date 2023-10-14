@@ -1,0 +1,27 @@
+{
+  "name": "loginform",
+  "version": "1.0.0",
+  "description": "Log in form and Registration form",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielobare/sportsbetsiteio.git"
+  },
+  "author": "Daniel Obare Nyakundi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielobare/sportsbetsiteio/issues"
+  },
+  "homepage": "https://github.com/danielobare/sportsbetsiteio#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express.js": "^1.0.0",
+    "knex": "^3.0.1",
+    "nodemon": "^3.0.1",
+    "passport-google-oauth20": "^2.0.0",
+    "pg": "^8.11.3"
+  }
+}
